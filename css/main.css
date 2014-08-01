@@ -1,3 +1,6 @@
+ /**{
+ 	border: 2px dashed red;
+ }*/
 .list-header {
 	position: relative;
 	display: block;
@@ -9,12 +12,13 @@
 	margin-right: auto;
 	margin-top: 5em;
 	background-color: #009688;
+	cursor: pointer;
 }
 
 .list-header-text {
 	position: relative;
 	color: white;
-	font-family: 'RobotoDraft', sans-serif;
+	font-family: 'icomoon', sans-serif;
 	text-align: center;
 	font-size: 2em;
 	font-weight: lighter;
@@ -25,6 +29,12 @@
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: .5em;
+	-webkit-user-select: none; /* Chrome/Safari */        
+	-moz-user-select: none; /* Firefox */
+	-ms-user-select: none; /* IE10+ */
+	/* Rules below not implemented in browsers yet */
+	-o-user-select: none;
+	user-select: none;
 }
 
 .list-container {
@@ -46,7 +56,7 @@
 	width: 100%;
 	min-width: 278px;
 	max-width: 425px;
-	border-bottom: .08em dotted lightgrey;
+	border-bottom: .08em solid lightgrey;
 }
 
 .input-field {
@@ -54,30 +64,52 @@
 	display: block;
 	height: 2em;
 	color: #485563;
-	font-family: 'RobotoDraft', sans-serif;
+	font-family: 'icomoon', sans-serif;
 	font-size: 1em;
 	text-align: left;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 1em;
+	margin-top: 1.3em;
 	width: 180px;
 	max-width: 220px;
 	min-width: 200px;
-	height: 33px;
+	height: 30px;
 	padding-left: .5em;
 }
 
-.icon-cancel {
+.btn-default {
+	position: relative;
 	float: right;
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-webkit-appearance: button;
+	align-items: flex-start;
+	text-align: center;
+	border: 2px solid #485563;
+	background: none;
+	cursor: pointer;
+	border-radius: 50%;
+	font-size: 24px;
+	font-weight: bold;
 	width: 30px;
-	height:30px;
+	height: 30px;
+	color: #485563;
+}
+
+.btn-default:hover {
+  /*background: #77a198;*/
 }
 
 .list-item {
-	position: relative;
 	display: block;
 	color: black;
-	border-bottom: .08em dotted lightgrey;
+	border-bottom: .08em solid lightgrey;
 	font-family: 'RobotoDraft', sans-serif;
 	text-align: center;
 	font-size: 1em;
