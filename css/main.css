@@ -135,23 +135,13 @@
   	-o-user-select: none;
 	user-select: none;
 }
-	color: white;
-	font-family: sans-serif;
-	text-align: center;
-	font-size: 2em;
-	font-weight: lighter;
-	width: 100%;
-	min-width: 100%;
-	max-width: 50%;
-	height: 1.5em;
-	margin-left: auto;
-	margin-right: auto;
-	padding-top: .5em;
-	-webkit-user-select: none;  /* Chrome all / Safari all */
- 	-moz-user-select: none;     /* Firefox all */
-  	-ms-user-select: none;      /* IE 10+ */
-  	-o-user-select: none;
-	user-select: none;
+
+.list-item:first-child,
+.list-item:nth-child(2),
+.list-item:nth-child(3) {
+	text-decoration: line-through;
+}
+
 /*
 .btn-x {
 	position: relative;
