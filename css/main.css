@@ -52,23 +52,6 @@
 	padding: 6px 0px 0px 0px;
 }
 
-.btn-add:active {
-  	color: #9e9e9e;
-  	position: relative;
-	font-family: 'Nunito';
-	text-align: justify;
-	display: inline-block;
-	background: none;
-	cursor: pointer;
-	border: none;
-	font-size: 24px;
-	font-weight: normal;
-	width: 15px;
-	height: 34px;
-	outline: none;
-	padding: 6px 0px 0px 0px;
-}
-
 .list-header {
 	position: relative;
 	display: block;

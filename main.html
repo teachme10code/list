@@ -12,10 +12,9 @@
 <body>
 	<div class="input-field-container">
 		<input type="text" name="input-field" placeholder="Add Item" class="input-field">
-		<input class="btn-add" type="submit" name="submit" value="+">
+		<input class="btn-add" type="submit" name="submit" value="+" onmousedown="buttonDownColor()" onmouseup="buttonUpColor()">
   	</div> 
-
-	<div class="list-header" onclick="changeHeaderColor()">
+	<div class="list-header" onclick="changeColor()">
 		<div class="list-header-text">Shopping List</div>
 	</div>
 	<div class="list-container">

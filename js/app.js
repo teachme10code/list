@@ -5,9 +5,9 @@ chris ward
 */
 
 //think about making this a javascript function and calling it on click from html
-/*$(document).ready(function() {*/
+//$(document).ready(function() {
 var color = 0;
-function changeHeaderColor() {
+function changeColor() {
 	var colors = ["#FF4081", "#3F51B5", "#0288d1", "#607d8b" , "#f36c60", "#ba68c8", "#009688"];
 	if (color === colors.length) {
 		color = 0;
@@ -20,4 +20,13 @@ function changeHeaderColor() {
 	$('.list-item').css("color", colors[color]);
 	color++;
 };
-/*});*/
+
+function buttonDownColor() {
+	$('.btn-add').css("color", "#9e9e9e");
+};
+
+function buttonUpColor() {
+	$('.btn-add').css("color", $('.list-header').css("background-color"));
+};
+
+
