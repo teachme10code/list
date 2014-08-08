@@ -29,4 +29,18 @@ function buttonUpColor() {
 	$('.btn-add').css("color", $('.list-header').css("background-color"));
 };
 
+function addListItem() {
+	var inputValue = $('.input-field').val();
+	$('.list-item:first-child').prepend(inputValue);
+	$('.input-field').val('');
+};
+
+$(this).keyup(function(event) {
+	var inputValue = $('.input-field').val();
+    if ( event.which == 13 ) {
+    	$('.list-item:first-child').prepend(inputValue);
+    	$('.input-field').val('');
+    }
+ });
+
 
