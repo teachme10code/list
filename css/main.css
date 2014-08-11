@@ -119,46 +119,43 @@
 	user-select: none;
 }
 
-/*
-
-.list-item:first-child,
-.list-item:nth-child(2),
-.list-item:nth-child(3) {
+.line-through {
 	text-decoration: line-through;
+
 }
 
 .btn-x {
-	position: relative;
 	float: right;
 	font-family: 'Nunito';
 	text-align: justify;
-	display: inline-block;
 	background: none;
 	cursor: pointer;
 	border: none;
-	font-size: 22px;
-	font-weight: bold;
+	font-size: 15px;
+	font-weight: bolder;
 	width: 15px;
-	height: 34px;
+	height: 25px;
 	color: #009688;
 	outline: none;
-	padding: 6px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	line-height: -1em;
 }
 
 .btn-check {
-	position: relative;
+	float: right;
 	font-family: 'Nunito';
 	text-align: justify;
-	display: inline-block;
+	text-decoration: none;
 	background: none;
 	cursor: pointer;
 	border: none;
-	font-size: 24px;
-	font-weight: bold;
+	font-size: 15px;
+	font-weight: bolder;
 	width: 15px;
-	height: 32px;
+	height: 25px;
 	color: #009688;
 	outline: none;
-	padding: 6px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	line-height: -1em;
+	margin: 0px;
 }
-*/

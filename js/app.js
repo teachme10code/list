@@ -31,15 +31,46 @@ function buttonUpColor() {
 
 function addListItem() {
 	var inputValue = $('.input-field').val();
-	$('.list-item:first-child').prepend(inputValue);
-	$('.input-field').val('');
+	if (inputValue == null || inputValue == '') {
+		alert('Enter something');
+		return
+	} else {
+		var listItem = $('<div class="list-item"></div>');
+		$('.list-container:last-child').append(listItem);
+		listItem.text(inputValue);
+		$('.input-field').val('');
+		var x_btn = $('<input class="btn-x" type="submit" name="x" value="&#10005">');
+		var chk_btn = $('<input class="btn-check" type="checkbox" name="btn-check" onclick="crossOutItem()">');
+		/*listItem.append(x_btn);*/
+		listItem.append(chk_btn);
+		var currentColor = $('.input-field').css("color");
+		listItem.css("color", currentColor);
+	}
 };
+
+function crossOutItem() {
+	$(event.target).closest('.list-item').toggleClass('line-through');
+}
+
 
 $(this).keyup(function(event) {
 	var inputValue = $('.input-field').val();
+	var listItem = $('<div class="list-item"></div>');
     if ( event.which == 13 ) {
-    	$('.list-item:first-child').prepend(inputValue);
-    	$('.input-field').val('');
+    	if (inputValue == null || inputValue == '') {
+			alert('Enter something');
+			return
+		} else {
+			$('.list-container:last-child').append(listItem);
+			listItem.text(inputValue);
+			$('.input-field').val('');
+			var x_btn = $('<input class="btn-x" type="submit" name="x" value="&#10005">');
+			var chk_btn = $('<input class="btn-check" type="checkbox" name="btn-check" onclick="crossOutItem()">');
+			/*listItem.append(x_btn);*/
+			listItem.append(chk_btn);
+			var currentColor = $('.input-field').css("color");
+			listItem.css("color", currentColor);
+		}
     }
  });
 
