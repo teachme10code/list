@@ -18,15 +18,18 @@ function changeColor() {
 	$('.input-field').css("color", colors[color]);
 	$('.btn-add').css("color", colors[color]);
 	$('.list-item').css("color", colors[color]);
+	$('.btn-remove').css("color", colors[color]);
 	color++;
 };
 
 function buttonDownColor() {
-	$('.btn-add').css("color", "#9e9e9e");
+	//$('.btn-add').css("color", "#9e9e9e");
+	$(event.target).css("color", "#9e9e9e");
 };
 
 function buttonUpColor() {
-	$('.btn-add').css("color", $('.list-header').css("background-color"));
+	//$('.btn-add').css("color", $('.list-header').css("background-color"));
+	$(event.target).css("color", $('.list-header').css("background-color"));
 };
 
 function addListItem() {
@@ -38,19 +41,16 @@ function addListItem() {
 		$('.list-container:last-child').append(listItem);
 		listItem.text(inputValue);
 		$('.input-field').val('');
-		var x_btn = $('<input class="btn-x" type="submit" name="x" value="&#10005">');
+		var remove_btn = $('<input class="btn-remove" type="submit" name="btn-remove" value="&minus;" onmousedown="buttonDownColor(); removeListItem()" onmouseup="buttonUpColor()">');
 		var chk_btn = $('<input class="btn-check" type="checkbox" name="btn-check" onclick="crossOutItem()">');
-		/*listItem.append(x_btn);*/
-		listItem.append(chk_btn);
+		listItem.prepend(chk_btn);
+		listItem.append(remove_btn);
 		var currentColor = $('.input-field').css("color");
 		listItem.css("color", currentColor)
 				.css("border-color", currentColor);
+		remove_btn.css("color", currentColor);
 	}
 };
-
-function crossOutItem() {
-	$(event.target).closest('.list-item').toggleClass('line-through');
-}
 
 $(this).keyup(function(event) {
 	var inputValue = $('.input-field').val();
@@ -62,15 +62,27 @@ $(this).keyup(function(event) {
 			$('.list-container:last-child').append(listItem);
 			listItem.text(inputValue);
 			$('.input-field').val('');
-			var x_btn = $('<input class="btn-x" type="submit" name="x" value="&#10005">');
+			var remove_btn = $('<input class="btn-remove" type="submit" name="btn-remove" value="&minus;" onmousedown="buttonDownColor(); removeListItem()" onmouseup="buttonUpColor()">');
 			var chk_btn = $('<input class="btn-check" type="checkbox" name="btn-check" onclick="crossOutItem()">');
-			/*listItem.append(x_btn);*/
-			listItem.append(chk_btn);
+			listItem.prepend(chk_btn);
+			listItem.append(remove_btn);
 			var currentColor = $('.input-field').css("color");
 			listItem.css("color", currentColor)
 					.css("border-color", currentColor);
+			remove_btn.css("color", currentColor);
 		}
     }
  });
+
+function crossOutItem() {
+	$(event.target).closest('.list-item').toggleClass('line-through');
+	//style checkbox
+}
+
+function removeListItem() {
+	$(event.target).closest('.list-item').remove();
+	//show - button on hover
+	//animate removal
+}
 
 
