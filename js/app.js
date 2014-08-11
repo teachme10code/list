@@ -32,7 +32,6 @@ function buttonUpColor() {
 function addListItem() {
 	var inputValue = $('.input-field').val();
 	if (inputValue == null || inputValue == '') {
-		alert('Enter something');
 		return
 	} else {
 		var listItem = $('<div class="list-item"></div>');
@@ -44,7 +43,8 @@ function addListItem() {
 		/*listItem.append(x_btn);*/
 		listItem.append(chk_btn);
 		var currentColor = $('.input-field').css("color");
-		listItem.css("color", currentColor);
+		listItem.css("color", currentColor)
+				.css("border-color", currentColor);
 	}
 };
 
@@ -52,13 +52,11 @@ function crossOutItem() {
 	$(event.target).closest('.list-item').toggleClass('line-through');
 }
 
-
 $(this).keyup(function(event) {
 	var inputValue = $('.input-field').val();
 	var listItem = $('<div class="list-item"></div>');
     if ( event.which == 13 ) {
     	if (inputValue == null || inputValue == '') {
-			alert('Enter something');
 			return
 		} else {
 			$('.list-container:last-child').append(listItem);
@@ -69,7 +67,8 @@ $(this).keyup(function(event) {
 			/*listItem.append(x_btn);*/
 			listItem.append(chk_btn);
 			var currentColor = $('.input-field').css("color");
-			listItem.css("color", currentColor);
+			listItem.css("color", currentColor)
+					.css("border-color", currentColor);
 		}
     }
  });
