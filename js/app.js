@@ -1,5 +1,5 @@
 /*
-shopping list app
+to do list app
 chris ward
 7/27/14
 */
