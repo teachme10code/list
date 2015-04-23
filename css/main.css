@@ -1,6 +1,6 @@
 /*div {
  	border: 1px dashed red;
- }*/
+ }
 
  .input-field-container {
 	display: block;
@@ -19,7 +19,7 @@
 	display: inline-block;
 	height: 2em;
 	color: #009688;
-	/*color: #485563;*/
+	/*color: #485563;
 	border-top: 0px;
 	border-left: 0px;
 	border-right: 0px;
@@ -37,13 +37,13 @@
 
 .btn-add {
 	position: relative;
-	font-family: 'Nunito';
+	font-family: 'Dancing Script';
 	display: inline-block;
 	vertical-align: center;
 	background: none;
 	cursor: pointer;
 	border: none;
-	font-size: 24px;
+	font-size: 36px;
 	font-weight: normal;
 	width: 15px;
 	height: 34px;
@@ -52,25 +52,23 @@
 	padding: 6px 0px 0px 0px;
 }
 
-.list-header {
+.pros_container {
 	position: relative;
-	display: block;
-	width: 299px;
-	min-width: 299px;
-	max-width: 299px;
+	display: inline-block;
+	border: 1px black dashed;
+	width: 199px;
+	min-width: 199px;
+	max-width: 199px;
 	height: 4em;
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #009688;
 	cursor: pointer;
-}
-
-.list-header-text {
 	position: relative;
 	color: white;
-	font-family: sans-serif;
+	font-family: 'Dancing Script';
 	text-align: center;
-	font-size: 2em;
+	font-size: 3.3em;
 	font-weight: lighter;
 	width: 100%;
 	min-width: 100%;
@@ -78,10 +76,62 @@
 	height: 1.5em;
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: .5em;
-	-webkit-user-select: none;  /* Chrome all / Safari all */
- 	-moz-user-select: none;     /* Firefox all */
-  	-ms-user-select: none;      /* IE 10+ */
+	padding-top: .4em;
+	-webkit-user-select: none;
+ 	-moz-user-select: none;
+  	-ms-user-select: none;
+  	-o-user-select: none;
+	user-select: none;
+}
+
+.pros-text-box {
+	position: relative;
+	color: white;
+	font-family: 'Dancing Script';
+	text-align: center;
+	font-size: 3.3em;
+	font-weight: lighter;
+	width: 100%;
+	min-width: 100%;
+	max-width: 50%;
+	height: 1.5em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: .4em;
+}
+
+.cons_container {
+	position: relative;
+	display: inline-block;
+	border: 1px black dashed;
+	width: 199px;
+	min-width: 199px;
+	max-width: 199px;
+	height: 4em;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #009688;
+}
+
+.cons-text-box {
+	position: relative;
+	float: right;
+	display: inline;
+	color: dark-grey;
+	font-family: 'Honey Script';
+	font-weight: bold;
+	text-align: center;
+	font-size: 4em;
+	width: 100%;
+	min-width: 100%;
+	max-width: 50%;
+	height: 1.5em;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: .4em;
+	-webkit-user-select: none;
+ 	-moz-user-select: none; 
+  	-ms-user-select: none; 
   	-o-user-select: none;
 	user-select: none;
 }
@@ -112,9 +162,9 @@
 	padding-top: 1em;
 	margin-left: auto;
 	margin-right: auto;
-	-webkit-user-select: none;  /* Chrome all / Safari all */
- 	-moz-user-select: none;     /* Firefox all */
-  	-ms-user-select: none;      /* IE 10+ */
+	-webkit-user-select: none;
+ 	-moz-user-select: none;
+  	-ms-user-select: none;
   	-o-user-select: none;
 	user-select: none;
 }
@@ -124,9 +174,8 @@
 }
 
 .btn-remove {
-	/*visibility: hidden;*/
 	float: right;
-	font-family: 'Nunito';
+	font-family: 'Dancing Script';
 	text-align: center;
 	vertical-align: center;
 	background: none;
@@ -144,7 +193,7 @@
 
 .btn-check {
 	float: left;
-	font-family: 'Nunito';
+	font-family: 'Dancing Script';
 	text-align: justify;
 	text-decoration: none;
 	background: none;
@@ -158,4 +207,53 @@
 	outline: none;
 	margin: 0px 0px 0px 5px;
 	line-height: 0px;
+}*/
+
+* {
+	background-color: #FAFAFA;
+}
+
+.panel-container {
+	width: 236px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.panel-default, .ul-container {
+	position: relative;
+	display: inline-block;
+	margin-top: 10px;
+	width: 96px;
+	height: 80%;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.pros {
+	font-family: 'Dancing Script';
+	color: #dcdcc6;
+	font-size: 3.5em;
+	font-weight: lighter;
+	width: 96px;
+	height: 40px;
+	margin-top: 10px;
+}
+
+.cons {
+	font-family: 'Allura', cursive;
+	color: #848476;
+	font-size: 3.5em;
+	font-weight: normal;
+	width: 96px;
+	height: 40px;
+	margin-top: 10px;
+}
+
+.list-group {
+	margin-left: auto;
+	margin-right: auto;
+}
+@list-group-border {
+	border-color: #ddd;
 }
