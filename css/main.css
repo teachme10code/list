@@ -12,32 +12,28 @@ h2 {
 	font-weight: lighter;
 }
 
-.col-sm-4 {
-	padding: 10px;
-	width: 380px;
-	min-height: 500px;
-}
-
-.three-columns {
+.three-columns, .row {
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
 	min-height: 500px;
 }
 
-.panel-default, .ul-container {
+.panel {
+	width: 360px;
+	padding: 10px;
 	min-height: 500px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 0px;
-	padding-left: 10px;
-	padding-right: 10px;
 	background-color: #FCFCFC;
 }
 
-div.panel-heading.pros,
-div.panel-heading.cons,
-div.panel-heading.results {
+.results-panel {
+	text-align: center;
+}
+
+.panel-heading {
 	font-family: inherit;
 	font-weight: lighter;
 	font-size: 42px;
@@ -50,25 +46,19 @@ div.panel-heading.results {
 	background-color: #FCFCFC;
 	padding-top: 4%;
 	padding-bottom: 0px;
+	margin-bottom: 0px;
 }
 
 #pros-heading {
 	color: #A4B27D;
-	margin-bottom: 0px;
 }
 
 #cons-heading {
 	color: #D07859;
-	margin-bottom: 0px;
 }
 
 #results-heading {
 	color: #B3A580;
-	margin-bottom: 0px;
-}
-
-.results-panel {
-	text-align: center;
 }
 
 .list-group {
