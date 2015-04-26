@@ -1,70 +1,70 @@
-/*html, div{
-	border: 1px black dashed;
-}*/
-
-body {
-	background-color: #F8F8E6;
-	/*background-color: #B7C68B;*/
-	/*background-color: #FAFAFA;*/
+body, .container {
+  background: -webkit-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%);
+  background:    -moz-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%);
+  background:     -ms-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%);
+  background:      -o-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%);
+  background:         linear-gradient(90deg, #606c88 10%, #3f4c6b 90%);
+  height: 700px;
 }
 
 h2 {
 	text-align: center;
-	color: #grey;
 	font-weight: lighter;
 }
 
 .col-sm-4 {
 	padding: 10px;
 	width: 380px;
+	min-height: 500px;
 }
 
 .three-columns {
 	position: absolute;
 	margin-left: auto;
 	margin-right: auto;
+	min-height: 500px;
 }
 
 .panel-default, .ul-container {
-	height: 800px;
+	min-height: 500px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-bottom: 0px;
 	padding-left: 10px;
 	padding-right: 10px;
+	background-color: #FCFCFC;
 }
 
 div.panel-heading.pros,
 div.panel-heading.cons,
 div.panel-heading.results {
-	font-family: 'Dancing Script';
+	font-family: inherit;
+	font-weight: lighter;
+	font-size: 42px;
 	text-align: center;
-	height: 10%;
+	height: 70px;
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 	border: none;
-	background-color: #ffffff;
-	padding: 0px;
+	background-color: #FCFCFC;
+	padding-top: 4%;
+	padding-bottom: 0px;
 }
 
 #pros-heading {
 	color: #A4B27D;
-	font-size: 56px;
 	margin-bottom: 0px;
 }
 
 #cons-heading {
-	/*font-family: 'Allura', cursive;*/
 	color: #D07859;
-	font-size: 56px;
 	margin-bottom: 0px;
 }
 
 #results-heading {
 	color: #B3A580;
-	font-size: 56px;
 	margin-bottom: 0px;
-	font-family: 'Allura', cursive;
 }
 
 .results-panel {
@@ -76,8 +76,10 @@ div.panel-heading.results {
 	margin-right: auto;
 	font-size: 26px;
 	list-style: none;
+	background-color: #FCFCFC;
 }
 
 .list-group-item {
 	border: none;
+	background-color: #FCFCFC;
 }
