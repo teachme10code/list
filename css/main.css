@@ -1,4 +1,4 @@
-body, .container {
+body {
   background: -webkit-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%);
   background:    -moz-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%);
   background:     -ms-linear-gradient(90deg, #606c88 10%, #3f4c6b 90%);
@@ -7,33 +7,50 @@ body, .container {
   height: 700px;
 }
 
+.up-in-here {
+	height: 700px;
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.column {
+	width: 30%;
+	min-width: 300px;
+}
+
 h2 {
 	text-align: center;
 	font-weight: lighter;
+	margin-top: 35px;
+	margin-bottom: 35px;
 }
 
-.three-columns, .row {
-	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
+.three-columns {
 	min-height: 500px;
+	margin-left: 10%;
+	margin-right: 10%;
+	width: 90%;
 }
 
-.panel {
-	width: 360px;
+.pros-panel,
+.cons-panel,
+.results-panel {
 	padding: 10px;
 	min-height: 500px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 0px;
-	background-color: #FCFCFC;
+	margin-bottom: 30px;
 }
 
 .results-panel {
 	text-align: center;
 }
 
-.panel-heading {
+#pros-heading,
+#cons-heading,
+#results-heading,
+.cons,
+.pros,
+.results {
 	font-family: inherit;
 	font-weight: lighter;
 	font-size: 42px;
@@ -43,8 +60,6 @@ h2 {
 	margin-left: auto;
 	margin-right: auto;
 	border: none;
-	background-color: #FCFCFC;
-	padding-top: 4%;
 	padding-bottom: 0px;
 	margin-bottom: 0px;
 }
@@ -62,14 +77,10 @@ h2 {
 }
 
 .list-group {
-	margin-left: auto;
-	margin-right: auto;
 	font-size: 26px;
 	list-style: none;
-	background-color: #FCFCFC;
 }
 
 .list-group-item {
 	border: none;
-	background-color: #FCFCFC;
 }
