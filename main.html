@@ -13,13 +13,22 @@
 	</head>
 	<body>
 		<div class="container up-in-here">
-			<h2>Name of your list goes here</h2>
 			<div class="row three-columns">
+				<div class="form-container">
+					<form class="form-inline input-wrapper">
+	  					<div class="form-group input-box">
+	    					<input type="text" class="form-control" id="input-field" placeholder="">
+	    				</div>
+	    				<button type="submit" class="btn btn-default" id="pro-button">Pro</button>
+	    				<button type="submit" class="btn btn-default" id="con-button">Con</button>
+	  				</form>	
+	  			</div>			
 				<div class="col-sm-4 column">
 					<div class="panel panel-default pros-panel ul-container">
 						<div class="panel-heading pros">
 							<p id="pros-heading">Pros</p>
 						</div>
+						<hr>
 						<ul class="list-group">
 							<li class="list-group-item">Cras justo odio ras justo</li>
 							<li class="list-group-item">Dapibus ac facilisis in Dap</li>
@@ -34,6 +43,7 @@
 						<div class="panel-heading cons">
 							<p id="cons-heading">Cons</p>
 						</div>
+						<hr>
 						<ul class="list-group">
 							<li class="list-group-item">Cras justo odio ras justo odio</li>
 							<li class="list-group-item">Dapibus ac facilisis in</li>
@@ -48,7 +58,8 @@
 						<div class="panel-heading results">
 							<p id="results-heading">Results</p>
 						</div>
-						<ul class="list-group">
+						<hr>
+						<ul class="list-group list">
 							<li class="list-group-item">90% Cras justo odio</li>
 							<li class="list-group-item">10% Dapibus ac facilisis</li>
 							<li class="list-group-item">Result: DO IT!</li>
