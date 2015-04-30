@@ -149,15 +149,14 @@ body {
 .pros,
 .results {
 	text-align: center;
-	font-family: Windsong;
-	font-size: 64px;
-	font-weight: bold;
+	font-family: Dancing Script;
+	font-size: 48px;
 	height: 70px;
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 	border: none;
-	padding-top: 8px;
+	padding-top: 6px;
 	padding-bottom: 0px;
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -172,7 +171,7 @@ body {
 }
 
 #results-heading {
-	color: #6f5fa1;
+	color: #6a6a6a;
 }
 
 hr {
