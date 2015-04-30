@@ -62,11 +62,20 @@ body {
 #pro-button {
 	position: static;
 	color: #A4B27D;
+	font-size: 22px;
+	padding: 0px;
+	width: 50px;
+	height: 32px;
+	padding-top: 2px;
 }
 
 #con-button {
-	position: static;
 	color: #D07859;
+	font-size: 22px;
+	padding: 0px;
+	width: 50px;
+	height: 32px;
+	padding-top: 2px;
 }
 
 .column {
@@ -139,16 +148,16 @@ body {
 .cons,
 .pros,
 .results {
-	font-family: inherit;
-	font-weight: lighter;
-	font-size: 42px;
 	text-align: center;
+	font-family: Windsong;
+	font-size: 64px;
+	font-weight: bold;
 	height: 70px;
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 	border: none;
-	padding-top: 5px;
+	padding-top: 8px;
 	padding-bottom: 0px;
 	margin-top: 0px;
 	margin-bottom: 0px;
@@ -163,11 +172,13 @@ body {
 }
 
 #results-heading {
-	color: #555;
+	color: #6f5fa1;
 }
 
 hr {
 	width: 80%;
+	border-color: #D7CFCF;
+	margin-bottom: 10px;
 }
 
 .list-group {
@@ -176,8 +187,10 @@ hr {
 }
 
 .list-group-item {
+	font-size: 20px;
 	border: none;
 	padding-left: 20px;
 	padding-right: 20px;
 	color: #555;
+	font-weight: normal;
 }
