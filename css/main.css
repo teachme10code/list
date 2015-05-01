@@ -9,9 +9,9 @@ body {
 
 @font-face {
   font-family: Dancing Script;
-  src: url('css/pablo-impallari_dancing-script/Dancing Script.ttf') format('truetype'),
-       url('css/pablo-impallari_dancing-script/Dancing Script.ttf') format('truetype'),
-       url('css/pablo-impallari_dancing-script/Dancing Script.ttf') format('truetype');
+  src: url('https://www.google.com/fonts#UsePlace:use/Collection:Dancing+Script') format('truetype'),
+       url('https://www.google.com/fonts#UsePlace:use/Collection:Dancing+Script') format('truetype'),
+       url('https://www.google.com/fonts#UsePlace:use/Collection:Dancing+Script') format('truetype');
 }
 
 .up-in-here {
@@ -167,7 +167,7 @@ body {
 .pros,
 .results {
 	text-align: center;
-	font-family: Dancing Script;
+	font-family: 'Dancing Script';
 	font-size: 48px;
 	height: 70px;
 	width: 90%;
