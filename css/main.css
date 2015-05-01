@@ -8,8 +8,10 @@ body {
 }
 
 @font-face {
-    font-family: Dancing Script;
-    src: url(css/pablo-impallari_dancing-script/Dancing Script.ttf);
+  font-family: Dancing Script;
+  src: url('css/pablo-impallari_dancing-script/Dancing Script.ttf') format('truetype'),
+       url('css/pablo-impallari_dancing-script/Dancing Script.ttf') format('truetype'),
+       url('css/pablo-impallari_dancing-script/Dancing Script.ttf') format('truetype');
 }
 
 .up-in-here {
