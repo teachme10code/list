@@ -7,6 +7,11 @@ body {
   height: 700px;
 }
 
+@font-face {
+    font-family: Dancing Script;
+    src: url(css/pablo-impallari_dancing-script/Dancing Script.ttf);
+}
+
 .up-in-here {
 	height: 700px;
 	width: 100%;
@@ -15,41 +20,33 @@ body {
 	margin-top: 60px;
 	padding-left: 20px;
 	padding-right: 20px;
-	position: static;
     z-index: 100;
 }
 
 .form-container {
 	position: static;
+	width: 328px;
+	max-height: 34px;
+	min-width: 328px;
 	margin-bottom: 30px;
 	margin-right: auto;
 	margin-left: auto;
 }
 
-.row-container {
-	width: 350px;
-	height: 35px;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-.three-columns {
-	position: static;
-	margin-left: auto;
-	margin-right: auto;
-	width: 1110px;
-}
-
 .input-wrapper {
 	position: static;
 	width: 328px;
+	max-height: 34px;
+	min-width: 328px;
 	margin-left: auto;
 	margin-right: auto;
 }
 
 .input-box {
-	position: relative;
-	width: 220px;
+	width: 328px;
+	min-width: 328px;
+	max-height: 34px;
+	margin: 0px;
 }
 
 #input-field {
@@ -81,6 +78,20 @@ body {
 	width: 50px;
 	height: 32px;
 	padding-top: 2px;
+}
+
+.row-container {
+	width: 350px;
+	height: 35px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.three-columns {
+	position: static;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1110px;
 }
 
 .column {

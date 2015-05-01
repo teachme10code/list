@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="proCon">
 	<head>
 		<meta charset="UTF-8">
 		<title>ProsNCons</title>
 		<link rel="icon" type="image/png" href="images/star.png">
 		<link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.css">
 		<link rel="stylesheet" href="css/main.css">
-		<link href="css/pablo-impallari_dancing-script/Dancing Script.ttf" rel="stylesheet" type="text/css">
+		<!--<link href="css/pablo-impallari_dancing-script/Dancing Script.ttf" rel="stylesheet" type="text/css">-->
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
 		<script src="js/jquery-1.11.2.min.js"></script>
 		<script src="js/app.js"></script>
 		<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
 	</head>
-	<body ng-app="proCon">
-		<div class="container up-in-here">
-			<div class="form-container">
-				<form class="form-inline input-wrapper">
-  					<div class="form-group input-box">
-    					<input type="text" class="form-control" id="input-field" placeholder="" autofocus="autofocus">
-    				</div>
-    				<button type="submit" class="btn btn-default" id="pro-button" ><span class="glyphicon glyphicon-star"</span></button>
-    				<button type="submit" class="btn btn-default" id="con-button"><span class="glyphicon glyphicon-star-empty"</span></button>
-  				</form>	
-  			</div>	
-			<div class="row three-columns">		
+	<body ng-controller="ListController">
+		<div class="container up-in-here">	
+			<div class="row three-columns">
+				<div class="form-container">
+					<form class="form-inline input-wrapper">
+	  					<div class="form-group input-box">
+	    					<input type="text" class="form-control" id="input-field" placeholder="" autofocus="autofocus" ng-minlength="1" ng-trim="true">
+	    					<button type="submit" class="btn btn-default" id="pro-button" ><span class="glyphicon glyphicon-star"</span></button>
+	    					<button type="submit" class="btn btn-default" id="con-button"><span class="glyphicon glyphicon-star-empty"</span></button>
+	    				</div>
+	  				</form>	
+	  			</div>					
 				<div class="col-sm-4 column">
 					<div class="panel panel-default pros-panel ul-container">
 						<div class="panel-heading pros">

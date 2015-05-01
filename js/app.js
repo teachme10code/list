@@ -2,10 +2,10 @@
   var app = angular.module('proCon', []);
 
   app.controller('ListController', function(){
-    this.products = gems;
+    this.list = list;
   });
 
-  app.controller('AddItemController', function(){
+  /*app.controller('AddItemController', function(){
     this.tab = 1;
 
     this.setTab = function(newValue){
@@ -15,35 +15,32 @@
     this.isSet = function(tabName){
       return this.tab === tabName;
     };
-  });
+  });*/
 
     app.controller('ResultsController', function(){
-    this.products = gems;
+    this.list = list;
   });
 
-  var gems = [{
-      name: 'Azurite',
-      description: "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
-      shine: 8,
-      price: 110.50,
-      rarity: 7,
-      color: '#CCC',
-      faces: 14,
-      images: [
-        "images/gem-02.gif",
-        "images/gem-05.gif",
-        "images/gem-09.gif"
-      ],
-      reviews: [{
-        stars: 5,
-        body: "I love this gem!",
-        author: "joe@example.org",
-        createdOn: 1397490980837
-      }, {
-        stars: 1,
-        body: "This gem sucks.",
-        author: "tim@example.org",
-        createdOn: 1397490980837
-      }]
+  var list = [{
+      name: 'Pros',
+      hint: "Your pros go here",
+      listItem: [{
+        weight: 0,
+        text: ""
+      }],
+      name: 'Cons',
+      hint: "Your cons go here",
+      listItem: [{
+        weight: 0,
+        text: ""
+      }],
+      name: 'Results',
+      hint: "This displays your results",
+      listItem: [{
+        prosText: "5 Pros",
+        consText: "6 Cons",
+        resultsText: "You shouldn't do it",
+        percentage: 0
+      }]      
     }];
 })();
