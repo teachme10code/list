@@ -69,6 +69,11 @@ body {
 	padding-top: 2px;
 }
 
+#pro-button:active,
+#con-button:active {
+	font-size: 16px;
+}
+
 #con-button {
 	color: #D07859;
 	font-size: 22px;
