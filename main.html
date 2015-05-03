@@ -12,14 +12,14 @@
 		<script src="js/app.js"></script>
 		<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
 	</head>
-	<body ng-controller="ListController">
-		<div class="container up-in-here">	
+	<body>
+		<div class="container up-in-here" ng-controller="ListController">	
 			<div class="row three-columns">
 				<div class="form-container">
 					<form class="form-inline input-wrapper">
 	  					<div class="form-group input-box">
-	    					<input type="text" class="form-control" id="input-field" placeholder="" autofocus="autofocus" ng-minlength="1" ng-trim="true">
-	    					<button type="submit" class="btn btn-default" id="pro-button" ><span class="glyphicon glyphicon-star"</span></button>
+	    					<input type="text" class="form-control" id="input-field" placeholder="" autofocus="autofocus" ng-trim="true" ng-model="userInput">
+	    					<button type="submit" class="btn btn-default" id="pro-button" ng-click="addListItem()"><span class="glyphicon glyphicon-star"</span></button>
 	    					<button type="submit" class="btn btn-default" id="con-button"><span class="glyphicon glyphicon-star-empty"</span></button>
 	    				</div>
 	  				</form>	
@@ -30,12 +30,8 @@
 							<p id="pros-heading">Pros</p>
 						</div>
 						<hr>
-						<ul class="list-group">
-							<li class="list-group-item">Cras justo odio ras justo</li>
-							<li class="list-group-item">Dapibus ac facilisis in Dap</li>
-							<li class="list-group-item">Morbi leo risus Morbi</li>
-							<li class="list-group-item">Porta ac consectetur ac</li>
-							<li class="list-group-item">Vestibulum at eros Vestibu</li>
+						<ul class="list-group" ng-repeat="item in listItems track by $index">
+							<li class="list-group-item">{{item}}</li>
 						</ul> 
 					</div>
 				</div>

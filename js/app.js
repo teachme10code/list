@@ -1,21 +1,12 @@
 (function() {
   var app = angular.module('proCon', []);
 
-  app.controller('ListController', function(){
-    this.list = list;
+  app.controller('ListController', function($scope){
+    $scope.listItems = [];
+    $scope.addListItem = function() {
+      $scope.listItems.push($scope.userInput);
+    };
   });
-
-  /*app.controller('AddItemController', function(){
-    this.tab = 1;
-
-    this.setTab = function(newValue){
-      this.tab = newValue;
-    };
-
-    this.isSet = function(tabName){
-      return this.tab === tabName;
-    };
-  });*/
 
     app.controller('ResultsController', function(){
     this.list = list;
