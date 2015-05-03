@@ -19,8 +19,8 @@
 					<form class="form-inline input-wrapper">
 	  					<div class="form-group input-box">
 	    					<input type="text" class="form-control" id="input-field" placeholder="" autofocus="autofocus" ng-trim="true" ng-model="userInput">
-	    					<button type="submit" class="btn btn-default" id="pro-button" ng-click="addListItem()"><span class="glyphicon glyphicon-star"</span></button>
-	    					<button type="submit" class="btn btn-default" id="con-button"><span class="glyphicon glyphicon-star-empty"</span></button>
+	    					<button type="submit" class="btn btn-default" id="pro-button" ng-click="addProListItem()"><span class="glyphicon glyphicon-star"</span></button>
+	    					<button type="submit" class="btn btn-default" id="con-button"ng-click="addConListItem()"><span class="glyphicon glyphicon-star-empty"</span></button>
 	    				</div>
 	  				</form>	
 	  			</div>					
@@ -30,7 +30,7 @@
 							<p id="pros-heading">Pros</p>
 						</div>
 						<hr>
-						<ul class="list-group" ng-repeat="item in listItems track by $index">
+						<ul class="list-group" ng-repeat="item in proListItems track by $index">
 							<li class="list-group-item">{{item}}</li>
 						</ul> 
 					</div>
@@ -41,12 +41,8 @@
 							<p id="cons-heading">Cons</p>
 						</div>
 						<hr>
-						<ul class="list-group">
-							<li class="list-group-item">Cras justo odio ras justo odio</li>
-							<li class="list-group-item">Dapibus ac facilisis in</li>
-							<li class="list-group-item">Morbi leo risus Morbi</li>
-							<li class="list-group-item">Porta ac consectetur ac</li>
-							<li class="list-group-item">Vestibulum at eros Vestibu</li>
+						<ul class="list-group" ng-repeat="item in conListItems track by $index">
+							<li class="list-group-item">{{item}}</li>
 						</ul>
 					</div>
 				</div>

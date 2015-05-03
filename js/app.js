@@ -2,10 +2,17 @@
   var app = angular.module('proCon', []);
 
   app.controller('ListController', function($scope){
-    $scope.listItems = [];
-    $scope.addListItem = function() {
-      $scope.listItems.push($scope.userInput);
+    $scope.proListItems = [];
+    $scope.conListItems = [];
+
+    $scope.addProListItem = function() {
+      $scope.proListItems.push($scope.userInput);
     };
+
+    $scope.addConListItem = function() {
+      $scope.conListItems.push($scope.userInput);
+    };
+
   });
 
     app.controller('ResultsController', function(){
