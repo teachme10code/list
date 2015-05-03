@@ -4,15 +4,21 @@
   app.controller('ListController', function($scope){
     $scope.proListItems = [];
     $scope.conListItems = [];
+    $scope.userInput = "";
 
     $scope.addProListItem = function() {
-      $scope.proListItems.push($scope.userInput);
-      $scope.userInput = "";
+      if ($scope.userInput.length > 0) {
+        $scope.proListItems.push($scope.userInput);
+        $scope.userInput = "";
+      }
+      console.log($scope.proListItems);
     };
 
     $scope.addConListItem = function() {
-      $scope.conListItems.push($scope.userInput);
-      $scope.userInput = "";
+      if ($scope.userInput.length > 0) {
+        $scope.conListItems.push($scope.userInput);
+        $scope.userInput = "";
+      }
     };
 
   });
