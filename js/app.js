@@ -7,10 +7,12 @@
 
     $scope.addProListItem = function() {
       $scope.proListItems.push($scope.userInput);
+      $scope.userInput = "";
     };
 
     $scope.addConListItem = function() {
       $scope.conListItems.push($scope.userInput);
+      $scope.userInput = "";
     };
 
   });
