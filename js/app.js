@@ -1,17 +1,17 @@
 (function() {
   var app = angular.module('proCon', []);
 
-  app.controller('ListController', function($scope){
+  app.controller('ListController', function($scope, $http){
     $scope.proListItems = [];
     $scope.conListItems = [];
     $scope.userInput = "";
+    var successCallback;
 
     $scope.addProListItem = function() {
       if ($scope.userInput.length > 0) {
         $scope.proListItems.push($scope.userInput);
         $scope.userInput = "";
       }
-      console.log($scope.proListItems);
     };
 
     $scope.addConListItem = function() {
@@ -19,7 +19,7 @@
         $scope.conListItems.push($scope.userInput);
         $scope.userInput = "";
       }
-    };
+    };    
 
   });
 
