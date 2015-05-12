@@ -11,6 +11,7 @@
 		<script src="js/jquery-1.11.2.min.js"></script>
 		<script src="js/app.js"></script>
 		<script src="bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+		<script src="ngDraggable/ngDraggable.js"></script>
 	</head>
 	<body>
 		<div class="container up-in-here" ng-controller="ListController">	
@@ -31,7 +32,7 @@
 						</div>
 						<hr>
 						<ul class="list-group" ng-repeat="item in proListItems track by $index">
-							<li class="list-group-item">{{item}}</li>
+							<li class="list-group-item" ng-drag="true" ng-drag-data="{{obj}}" ng-drag-success="onDragComplete($data,$event)" ng-center-anchor="true">{{item}}</li>
 						</ul> 
 					</div>
 				</div>
@@ -42,7 +43,7 @@
 						</div>
 						<hr>
 						<ul class="list-group" ng-repeat="item in conListItems track by $index">
-							<li class="list-group-item">{{item}}</li>
+							<li class="list-group-item" ng-drop="true" ng-drop-success="onDropComplete($data,$event)">{{item}}</li>
 						</ul>
 					</div>
 				</div>

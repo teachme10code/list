@@ -1,5 +1,16 @@
 (function() {
-  var app = angular.module('proCon', []);
+
+  var app = angular.module('proCon', ['ngDraggable']);
+
+  app.controller('MainCtrl', function($scope) {
+    $scope.onDragComplete=function(data,evt){
+       console.log("drag success, data:", data);
+    }
+
+    $scope.onDropComplete=function(data,evt){
+        console.log("drop success, data:", data);
+    }
+  });
 
   app.controller('ListController', function($scope, $http){
     $scope.proListItems = [];
