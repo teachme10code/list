@@ -2,37 +2,52 @@
 
   var app = angular.module('proCon', ['ngDraggable']);
 
-  app.controller('MainCtrl', function($scope) {
-    $scope.onDragComplete=function(data,evt){
-       console.log("drag success, data:", data);
-    }
-
-    $scope.onDropComplete=function(data,evt){
-        console.log("drop success, data:", data);
-    }
-  });
-
-  app.controller('ListController', function($scope, $http){
+  app.controller('MainCtrl', function($scope, $http){
     $scope.proListItems = [];
     $scope.conListItems = [];
-    $scope.userInput = "";
+    $scope.draggableObjects = [];
+    $scope.userInput;
     var successCallback;
 
     $scope.addProListItem = function() {
       if ($scope.userInput.length > 0) {
         $scope.proListItems.push($scope.userInput);
-        $scope.userInput = "";
+        $scope.userInput = null;
+        $scope.draggableObjects.push($scope.userInput);
       }
     };
 
     $scope.addConListItem = function() {
       if ($scope.userInput.length > 0) {
         $scope.conListItems.push($scope.userInput);
-        $scope.userInput = "";
+        $scope.userInput = null;
+        $scope.draggableObjects.push($scope.userInput);
       }
-    };    
+    };
+
+    $scope.onDragComplete=function(data, evt, index){
+       console.log("drag success, data:", data);
+    }
+
+    $scope.onDropComplete=function(data, evt, index){
+        console.log("drop success, data:", data);
+        var otherObj = $scope.draggableObjects[index];
+        var otherIndex = $scope.draggableObjects.indexOf(data);
+        $scope.draggableObjects[index] = data;
+        $scope.draggableObjects[otherIndex] = otherObj;
+    }    
 
   });
+
+
+
+
+
+
+
+
+
+
 
     app.controller('ResultsController', function(){
     this.list = list;

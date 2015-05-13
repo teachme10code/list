@@ -14,12 +14,12 @@
 		<script src="ngDraggable/ngDraggable.js"></script>
 	</head>
 	<body>
-		<div class="container up-in-here" ng-controller="ListController">	
+		<div class="container up-in-here" ng-controller="MainCtrl">	
 			<div class="row three-columns">
 				<div class="form-container">
 					<form class="form-inline input-wrapper">
 	  					<div class="form-group input-box">
-	    					<input type="text" class="form-control" id="input-field" placeholder="" autofocus="autofocus" ng-model="userInput" ng-minlength="1">
+	    					<input type="text" class="form-control" id="input-field" autofocus="autofocus" ng-model="userInput" ng-minlength="1">
 	    					<button type="submit" class="btn btn-default" id="pro-button" ng-click="addProListItem()"><span class="glyphicon glyphicon-star"</span></button>
 	    					<button type="submit" class="btn btn-default" id="con-button" ng-click="addConListItem()"><span class="glyphicon glyphicon-star-empty"</span></button>
 	    				</div>
@@ -32,7 +32,7 @@
 						</div>
 						<hr>
 						<ul class="list-group" ng-repeat="item in proListItems track by $index">
-							<li class="list-group-item" ng-drag="true" ng-drag-data="{{obj}}" ng-drag-success="onDragComplete($data,$event)" ng-center-anchor="true">{{item}}</li>
+							<li class="list-group-item pro-item" ng-drag="true" ng-drag-data="item" ng-drag-success="onDragComplete($data, $event, $index)" ng-center-anchor="true" data-allow-transform="true" ng-drop="true">{{item}}</li>
 						</ul> 
 					</div>
 				</div>
@@ -43,7 +43,7 @@
 						</div>
 						<hr>
 						<ul class="list-group" ng-repeat="item in conListItems track by $index">
-							<li class="list-group-item" ng-drop="true" ng-drop-success="onDropComplete($data,$event)">{{item}}</li>
+							<li class="list-group-item con-item" ng-drag="true" ng-drop="true" ng-drag-stop="true" ng-drop-success="onDropComplete($data, $event, $index)" ng-drag-data="item" ng-drag-success="onDragComplete($data, $event, $index)" ng-center-anchor="true" data-allow-transform="true">{{item}}</li>
 						</ul>
 					</div>
 				</div>
@@ -53,9 +53,9 @@
 							<p id="results-heading">Results</p>
 						</div>
 						<hr>
-						<ul class="list-group list">
+						<!--<ul class="list-group list">
 							<li class="list-group-item"></li>
-						</ul>
+						</ul>-->
 					</div>
 				</div>
 			</div>

@@ -192,7 +192,7 @@ body {
 hr {
 	width: 80%;
 	border-color: #D7CFCF;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 .list-group {
@@ -202,10 +202,26 @@ hr {
 
 .list-group-item {
 	font-size: 20px;
-	border: none;
-	padding-left: 20px;
-	padding-right: 20px;
-	padding-bottom: 0px;
 	color: #555;
 	font-weight: normal;
+	border: none;
 }
+
+.list-group-item:hover {
+	box-shadow: 0px 0px 1px 0px #99a3ad, 0px 0px 0px #eeeeee;
+	cursor: pointer;
+}
+
+.panel > .list-group .list-group-item {
+	border-radius: 4px;
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 2px;
+}
+
+/*.panel > .list-group:last-child .list-group-item:last-child, .panel > .panel-collapse > .list-group:last-child .list-group-item:last-child {
+	border: 1px red solid;
+}*/
+
+
