@@ -1,2 +1,2 @@
-[submodule "ngdraggable"]
-    path = ./ngdraggble
+[submodule "ngDraggable"]
+    path = https://github.com/fatlinesofcode/ngDraggable.git
