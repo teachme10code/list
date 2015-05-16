@@ -5,6 +5,7 @@ var proConRoutes = require('./routes/ProConRoutes');
 var urlencode = require('urlencode');
 var json = require('json-middleware');
 var bodyParser = require('body-parser');
+var config = require("./config");
 
 //Create and configure app
 var app = express();
@@ -40,16 +41,8 @@ app.delete('/proConListItem', proConRoutes.deleteProConListItem);
 app.put('/userPreferences', proConRoutes.putUserPreferences);
 app.get('/userPreferences', proConRoutes.getUserPreferences);
 
-
-//REVISIT - Since we only initialize the database in this file we could 
-//skip using a pool 
-var pool = mysql.createPool({
-    connectionLimit : 100, //important
-    host     : 'localhost',
-    user     : 'root',
-    password : '',
-    debug    :  false
-  });
+  
+var pool = mysql.createPool(config.database);
 
 function handle_database(req, res) {
   "use strict";

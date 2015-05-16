@@ -1,13 +1,8 @@
 /*global console: false, exports: false, require: false  */
 var mysql = require('mysql');
+var config = require("../config");
 
-var pool = mysql.createPool({
-    connectionLimit : 100, //important
-    host     : 'localhost',
-    user     : 'root',
-    password : '',
-    debug    :  false
-  });
+var pool = mysql.createPool(config.database);
 
 var Topic = function (topicId, description, userId) {
     "use strict";
