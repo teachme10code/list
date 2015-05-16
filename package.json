@@ -1,0 +1,31 @@
+{
+  "name": "list",
+  "version": "0.0.1",
+  "description": "Pro Con Server",
+  "main": "ProConServer.js",
+  "dependencies": {
+    "express": "^4.12.3",
+    "body-parser": "^1.12.4",
+    "json-middleware": "^1.0.2",
+    "mysql": "^2.6.2",
+    "urlencode": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/teachme10code/list.git"
+  },
+  "keywords": [
+    "pro",
+    "con"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teachme10code/list/issues"
+  },
+  "homepage": "https://github.com/teachme10code/list"
+}
