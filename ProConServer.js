@@ -8,6 +8,7 @@ var bodyParser = require('body-parser');
 
 //Create and configure app
 var app = express();
+app.set('port', (process.env.PORT || 3000));
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({
   extended: false
@@ -181,7 +182,7 @@ init_database();
 
 
 //Start server
-var server = app.listen(3000, function () {
+var server = app.listen(app.get('port'), function () {
   "use strict";
   var host = server.address().address,
     port = server.address().port;
