@@ -40,7 +40,7 @@ function connectAndUseDB(req, res, next, crudMethod) {
 
     console.log('connected as id ' + connection.threadId);
 
-    connection.query('USE pro_con_db', function (err, results) {
+    connection.query('USE ' + config.database.database, function (err, results) {
       if (err) {
         console.log("ERROR: " + err.message);
         throw err;

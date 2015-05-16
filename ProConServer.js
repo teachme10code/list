@@ -129,7 +129,7 @@ function dbCreated(connection) {
   "use strict";
   console.log("DB succesfully created!");
 
-  connection.query('USE pro_con_db', function (err, results) {
+  connection.query('USE ' + config.database.database, function (err, results) {
     if (err) {
       console.log("ERROR: " + err.message);
       throw err;
@@ -150,7 +150,7 @@ function init_database() {
 
     console.log('connected as id ' + connection.threadId);
 
-    connection.query('CREATE DATABASE pro_con_db', function (err, results) {
+    connection.query('CREATE DATABASE ' + config.database.database, function (err, results) {
       if (err && err.number !== mysql.ERROR_DB_CREATE_EXISTS) {
         console.log("ERROR: " + err.message);
         throw err;
