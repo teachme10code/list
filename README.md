@@ -6,23 +6,22 @@ This repository contains code for a pro con server with an angular based client
 
 ### How do I get set up? ###
 
-* Summary of set up
-**Install node
-**Install node dependencies running 'npm install' in the root directory
-**Install mysql with the following:
-- Username: root
-- Password: 
-**Start mysql by running 'sudo /usr/local/mysql/support-files/mysql.server start' 
-**Run 'node ProConServer.js' in your terminal
+#### Summary of set up ####
+* Install node
+* Install node dependencies running 'npm install' in the root directory
+* Install mysql with the following:
+** Username: root
+** Password: 
+* Start mysql by running 'sudo /usr/local/mysql/support-files/mysql.server start' 
+* Run 'node ProConServer.js' in your terminal
 
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+#### Configuration ####
+#### Dependencies ####
+#### Database configuration ####
+#### How to run tests ####
+#### Deployment instructions ####
+#### Other notes ####
 
-
-* Other notes
 WARNING: These need to be cleaned up so may not work.
 -----
 curl -H "Content-Type: application/json" -d '{"userId":2, "topicId":30, "type":"PRO", description":"It will feel like Thanksgiving", "weight":7}' 127.0.0.1:3000/proConListitem -v
