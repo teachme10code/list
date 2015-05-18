@@ -17,7 +17,7 @@ if (process.env.PORT) {
       host     : 'localhost',
       user     : 'root',
       password : '',
-      database :  'pro_con_db',
+      database :  '',
       debug    :  false
     }
   };

@@ -1,4 +1,4 @@
-/*global console: false, require: false  */
+/*global console: false, require: false, process: false, __dirname: false */
 var express = require('express');
 var mysql = require('mysql');
 var proConRoutes = require('./routes/ProConRoutes');
@@ -41,7 +41,7 @@ app.delete('/proConListItem', proConRoutes.deleteProConListItem);
 app.put('/userPreferences', proConRoutes.putUserPreferences);
 app.get('/userPreferences', proConRoutes.getUserPreferences);
 
-  
+
 var pool = mysql.createPool(config.database);
 
 function handle_database(req, res) {
@@ -64,6 +64,7 @@ function handle_database(req, res) {
 
     connection.on('error', function (err) {
       res.json({"code" : 100, "status" : "Error in connection database"});
+      console.log(err);
       return;
     });
   });
@@ -74,17 +75,16 @@ function useOk(client) {
 
   var totalQueries = 3;
   function queryCallback(err, results) {
-      if (err && err.number !== mysql.ERROR_TABLE_EXISTS_ERROR) {
-        console.log("ERROR: " + err.message);
-        throw err;
-      }
-      totalQueries -= 1;
-      console.log("table ready");
-      if (totalQueries === 0)
-      {
-        console.log("Releasing client");
-        client.release(); 
-      }
+    if (err && err.number !== mysql.ERROR_TABLE_EXISTS_ERROR) {
+      console.log("ERROR: " + err.message);
+      throw err;
+    }
+    totalQueries -= 1;
+    console.log("table ready");
+    if (totalQueries === 0) {
+      console.log("Releasing client");
+      client.release();
+    }
   } //queryCallback
 
   // UserId
@@ -95,7 +95,8 @@ function useOk(client) {
       'user_name VARCHAR(255), ' +
       'password VARCHAR(255), ' +
       'PRIMARY KEY (user_id));',
-      queryCallback);
+    queryCallback
+  );
 
   // UserId
   // TopicId
@@ -106,7 +107,8 @@ function useOk(client) {
       'user_id INT(11), ' +
       'description VARCHAR(255), ' +
       'PRIMARY KEY (topic_id));',
-      queryCallback);
+    queryCallback
+  );
 
   // TopicId
   // Pro/Con
@@ -121,7 +123,8 @@ function useOk(client) {
       'description VARCHAR(255), ' +
       'weight INT(11), ' +
       'PRIMARY KEY (id));',
-      queryCallback);
+    queryCallback
+  );
 }
 
 
@@ -150,6 +153,9 @@ function init_database() {
 
     console.log('connected as id ' + connection.threadId);
 
+    if (config.database.database.length === 0) {
+      config.database.database = "pro_con_db";
+    }
     connection.query('CREATE DATABASE ' + config.database.database, function (err, results) {
       if (err && err.number !== mysql.ERROR_DB_CREATE_EXISTS) {
         console.log("ERROR: " + err.message);
